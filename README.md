@@ -1,1 +1,1 @@
-# CRUD-interfa-
+# CRUD-interfata realizat cu HTML, JS
