@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>CRUD js</title>
-    <link rel="stylesheet" href="index.css">
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <title>CRUD js</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
 
 
 
-    <table>
-      <tr>
-        <td>
+  <table>
+    <tr>
+      <td>
 
-        <form   onsubmit="event.preventDefault(); onFormSubmit();"   autocomplete="off">
 
-          <div class="">
-            <label for="">Nume</label>
-            <input type="text" name="Nume" value="" id="Nume" required>
+        <form onsubmit="event.preventDefault();" autocomplete="off">
+          <!-- NOTE: blocheaza comportamentul prestabilit al butonului default; pentru a putea crea o functie care sa-l actioneze  -->
+
+
+          <label for="">Nume</label>
+          <input type="text" name="Nume" value="" id="Nume" required>
           </div>
           <div class="">
             <label for="">Cod</label>
@@ -32,37 +36,39 @@
             <input type="text" name="Oras" value="" id="Oras" required>
           </div>
 
-          <input  type="submit" name="" value="Adauga" >
+          <input id="submit" type="submit" name="" value="Adauga">
         </form>
 
       </td>
 
-          <td>
+      <td>
 
-  <div style="overflow:scroll;height:400px;width:100%;">
+        <div style="overflow:scroll;height:400px;width:100%;">
+          <!-- NOTE: pentru a nu se modifica dimensiunea tabelului la adaugarea mai multor inregistrari -->
 
-            <table class="lista" id="listaAngajati">
-              <thead>
-                <tr>
-                  <th>Nume</th>
-                  <th>Cod</th>
-                  <th>Salariu</th>
-                  <th>Oras</th>
-                  <th></th> <!-- NOTE: linie libera unde vor aparea butoanele de delete si update -->
-                </tr>
-              </thead>
-              <tbody>
+          <table class="lista" id="listaAngajati">
+            <thead>
+              <tr>
+                <th>Nume</th>
+                <th>Cod</th>
+                <th>Salariu</th>
+                <th>Oras</th>
+                <th></th> <!-- NOTE: linie libera unde vor aparea butoanele de delete si update -->
+              </tr>
+            </thead>
+            <tbody>
 
-              </tbody>
-            </table>
+            </tbody>
+          </table>
 
-          </td>
+      </td>
 
-        </div>
+      </div>
 
 
-      </tr>
-    </table>
-      <script src="script.js"></script>
-  </body>
+    </tr>
+  </table>
+  <script src="script.js"></script>
+</body>
+
 </html>
