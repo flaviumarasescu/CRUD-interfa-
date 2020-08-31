@@ -1,7 +1,6 @@
-let selectedRow = null // NOTE:
+let selectedRow = null 
 
 document.getElementById("submit").addEventListener("click", function formSubmit() {
-  event.preventDefault();
   let formData = readFormData();
   if (selectedRow == null)
     insertNewRecord(formData);
@@ -36,7 +35,7 @@ function insertNewRecord(data) {             // NOTE: Crearea celulelor si inser
   cell4 = newRow.insertCell(4);
   cell4.innerHTML = `<button type="button"  onClick="onEdit(this)"  >Update</button>                                                  
                       <button type="button" onClick="onDelete(this)">Delete</button>` ;
-  // NOTE: `` in loc de "" sau '' pentru a putea scrie pe mai multe linii asad
+
 }
 
 function resetForm() {
